@@ -2,14 +2,21 @@ import React from 'react';
 
 export default function Event() {
   return (
-    <section className="section" id="events">
-      <div className="section-container">
-        <h2 className="section-title">Featured Events</h2>
-        <div className="event-card">
-          <img src="/event-poster.png" alt="Event Poster" className="event-poster-img" />
-          <div className="event-info">
-            <h3>Flagship Tech Summit</h3>
-            <p>Join keynotes, competitive hack sessions, and expert panels.</p>
+    <section className="events" id="events">
+      <div className="events-container">
+        <div className="section-label">Events</div>
+
+        {/* Coming soon banner */}
+        <div className="events-coming-soon">
+          <h2 className="events-coming-soon-heading">
+            Something Big is <span className="highlight">Brewing.</span>
+          </h2>
+          <p className="events-coming-soon-text">
+            Our first wave of events, hackathons, and workshops are being planned right now. Stay tuned — registrations will open soon.
+          </p>
+          <div className="events-coming-soon-badge">
+            <span className="pulse-dot" />
+            Coming Soon
           </div>
         </div>
       </div>

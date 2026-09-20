@@ -1,14 +1,6 @@
 import React from 'react';
 
+/* Not shown as a distinct section in the screenshots — kept as a hidden placeholder */
 export default function Workshop() {
-  return (
-    <section className="section" id="workshops">
-      <div className="section-container">
-        <h2 className="section-title">Workshops</h2>
-        <p className="section-description">
-          Deep-dive technical workshops on modern web development, cloud computing, AI, and systems design.
-        </p>
-      </div>
-    </section>
-  );
+  return null;
 }

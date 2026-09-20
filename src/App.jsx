@@ -17,8 +17,9 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Activities />
         <Event />
+        <Activities />
+        {/* Sections below are kept as placeholders — not shown in current screenshots */}
         <Workshop />
         <Schedule />
         <Team />
