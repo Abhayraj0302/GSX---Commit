@@ -32,9 +32,9 @@ export default function Hero({ introPhase = 2 }) {
         <div className={`intro-content ${introPhase >= 2 ? 'intro-visible' : ''}`}>
           {/* Subtitle */}
           <p className="hero-subtitle">
-            The hub for builders, hackers, and creators at MITS-DU
+            The hub for builders, creators, and contributors at MITS‑DU Gwalior.
             <br />
-            Gwalior. We build. We ship. We grow.
+            We build. We deploy. We contribute.
           </p>
 
           {/* CTA button */}
