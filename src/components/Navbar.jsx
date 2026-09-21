@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
+import { ShinyButton } from './ui/shiny-button';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,9 +22,10 @@ export default function Navbar() {
 
         {/* Register button */}
         <div className="navbar-cta" style={{ display: 'flex' }}>
-          <a href="#events" className="btn btn-primary">Register Now</a>
+          <ShinyButton href="#events">Register Now</ShinyButton>
         </div>
       </div>
     </header>
   );
 }
+
