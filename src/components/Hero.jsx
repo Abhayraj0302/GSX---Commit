@@ -17,11 +17,7 @@ export default function Hero({ introPhase = 2 }) {
         {/* Giant title — GSX GWALIOR — animates in FIRST with letter scramble */}
         <div className={`hero-title-group intro-title ${introPhase >= 1 ? 'intro-visible' : ''}`}>
           <h1 className="hero-title-line hero-title-gsx">
-            <HyperText
-              text="GSX"
-              duration={900}
-              className="hero-hyper-letter"
-            />
+            <span className="hero-hyper-letter">GSX</span>
           </h1>
           <div className="hero-title-line hero-title-gwalior">
             <HyperText

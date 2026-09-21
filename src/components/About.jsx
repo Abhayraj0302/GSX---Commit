@@ -1,4 +1,5 @@
 import React from 'react';
+import { TypingEffect } from './ui/typing-effect';
 
 const marqueeItems = [
   'Design Sprints',
@@ -45,6 +46,8 @@ const features = [
   },
 ];
 
+const rotatingWords = ['build.', 'create.', 'develop.', 'innovate.'];
+
 export default function About() {
   return (
     <>
@@ -77,7 +80,12 @@ export default function About() {
                 <br />
                 ones who
                 <br />
-                <span className="highlight">build.</span>
+                <TypingEffect
+                  texts={rotatingWords}
+                  className="highlight"
+                  typingSpeed={120}
+                  rotationInterval={2500}
+                />
               </h2>
               <p className="about-text">
                 GSX Gwalior is a student-led technology community at MIT-DU Gwalior, built to bridge the gap between academic learning and real-world engineering. We create a space where students can learn, build, connect, and grow through hands-on experiences.

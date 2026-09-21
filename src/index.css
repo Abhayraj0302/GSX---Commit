@@ -423,7 +423,7 @@ button {
 .hero-title-gsx {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(2.8rem, 6.2vw, 5.8rem);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
   line-height: 0.95;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -438,7 +438,7 @@ button {
 .hero-title-gwalior {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(3.2rem, 8vw, 7.8rem);
+  font-size: clamp(2.6rem, 6.5vw, 6rem);
   line-height: 0.98;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -645,6 +645,28 @@ button {
 
 .about-heading .highlight {
   color: var(--accent-purple-light);
+}
+
+/* TypingEffect inside about heading */
+.about-heading .typing-effect {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--accent-purple-light);
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  min-width: 3ch;
+}
+
+.typing-effect-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  vertical-align: baseline;
 }
 
 .about-text {
@@ -1517,12 +1539,12 @@ button {
   }
 
   .hero-title-gsx {
-    font-size: clamp(2.1rem, 9.5vw, 3.5rem);
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
     white-space: nowrap;
   }
 
   .hero-title-gwalior {
-    font-size: clamp(2.4rem, 11vw, 4.2rem);
+    font-size: clamp(2rem, 9vw, 3.4rem);
     white-space: nowrap;
   }
 
@@ -1618,12 +1640,12 @@ button {
    ======================================== */
 @media (max-width: 480px) {
   .hero-title-gsx {
-    font-size: clamp(1.7rem, 8.5vw, 2.4rem);
+    font-size: clamp(1.4rem, 7vw, 1.9rem);
     white-space: nowrap;
   }
 
   .hero-title-gwalior {
-    font-size: clamp(1.95rem, 10vw, 2.9rem);
+    font-size: clamp(1.6rem, 8.5vw, 2.3rem);
     white-space: nowrap;
   }
 
