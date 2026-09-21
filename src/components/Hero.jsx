@@ -1,6 +1,7 @@
 import React from 'react';
+import { HyperText } from './ui/hyper-text';
 
-export default function Hero() {
+export default function Hero({ introPhase = 2 }) {
   return (
     <section className="hero" id="home">
       {/* Decorative dot grids */}
@@ -13,30 +14,45 @@ export default function Hero() {
       </div>
 
       <div className="hero-container">
-        {/* Giant title — GSX GWALIOR */}
-        <div className="hero-title-group">
-          <h1 className="hero-title-line hero-title-gsx">GSX</h1>
-          <div className="hero-title-line hero-title-gwalior">Gwalior</div>
+        {/* Giant title — GSX GWALIOR — animates in FIRST with letter scramble */}
+        <div className={`hero-title-group intro-title ${introPhase >= 1 ? 'intro-visible' : ''}`}>
+          <h1 className="hero-title-line hero-title-gsx">
+            <HyperText
+              text="GSX"
+              duration={900}
+              className="hero-hyper-letter"
+            />
+          </h1>
+          <div className="hero-title-line hero-title-gwalior">
+            <HyperText
+              text="GWALIOR"
+              duration={1100}
+              className="hero-hyper-letter"
+            />
+          </div>
         </div>
 
-        {/* Subtitle */}
-        <p className="hero-subtitle">
-          The hub for builders, hackers, and creators at MITS-DU
-          <br />
-          Gwalior. We build. We ship. We grow.
-        </p>
+        {/* Rest of hero content — animates in SECOND */}
+        <div className={`intro-content ${introPhase >= 2 ? 'intro-visible' : ''}`}>
+          {/* Subtitle */}
+          <p className="hero-subtitle">
+            The hub for builders, hackers, and creators at MITS-DU
+            <br />
+            Gwalior. We build. We ship. We grow.
+          </p>
 
-        {/* CTA button */}
-        <div className="hero-actions">
-          <a href="#events" className="btn btn-secondary">
-            Explore Events
-          </a>
-        </div>
+          {/* CTA button */}
+          <div className="hero-actions">
+            <a href="#events" className="btn btn-secondary">
+              Explore Events
+            </a>
+          </div>
 
-        {/* Scroll indicator */}
-        <div className="hero-scroll" aria-hidden="true">
-          <span>Scroll</span>
-          <div className="hero-scroll-line" />
+          {/* Scroll indicator */}
+          <div className="hero-scroll" aria-hidden="true">
+            <span>Scroll</span>
+            <div className="hero-scroll-line" />
+          </div>
         </div>
       </div>
     </section>

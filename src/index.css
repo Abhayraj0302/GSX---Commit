@@ -99,7 +99,7 @@ button {
 }
 
 /* Main content must sit above the fixed footer for "curtain reveal" */
-.app-layout > main {
+.app-layout>main {
   position: relative;
   z-index: 10;
   background: var(--bg-primary);
@@ -1160,13 +1160,25 @@ button {
 
 /* ── Animations ── */
 @keyframes cfootBreathe {
-  0%   { transform: translate(-50%, -50%) scale(1);   opacity: 0.5; }
-  100% { transform: translate(-50%, -50%) scale(1.12); opacity: 0.9; }
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.12);
+    opacity: 0.9;
+  }
 }
 
 @keyframes cfootMarquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* ── Curtain-reveal wrapper ── */
@@ -1205,12 +1217,10 @@ button {
   pointer-events: none;
   z-index: 0;
   filter: blur(80px);
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(124, 58, 237, 0.12) 0%,
-    rgba(20, 184, 166, 0.08) 40%,
-    transparent 70%
-  );
+  background: radial-gradient(circle at 50% 50%,
+      rgba(124, 58, 237, 0.12) 0%,
+      rgba(20, 184, 166, 0.08) 40%,
+      transparent 70%);
   animation: cfootBreathe 8s ease-in-out infinite alternate;
 }
 
@@ -1222,8 +1232,8 @@ button {
   pointer-events: none;
   background-size: 60px 60px;
   background-image:
-    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
 }
@@ -1354,11 +1364,9 @@ button {
   cursor: pointer;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0.01) 100%
-  );
+  background: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.01) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow:
@@ -1369,11 +1377,9 @@ button {
 }
 
 .cfoot-pill:hover {
-  background: linear-gradient(
-    145deg,
-    rgba(124, 58, 237, 0.12) 0%,
-    rgba(124, 58, 237, 0.04) 100%
-  );
+  background: linear-gradient(145deg,
+      rgba(124, 58, 237, 0.12) 0%,
+      rgba(124, 58, 237, 0.04) 100%);
   border-color: rgba(124, 58, 237, 0.35);
   color: var(--text-primary);
   box-shadow:
@@ -1644,5 +1650,167 @@ button {
 
   .event-card {
     padding: 1.25rem;
+  }
+}
+
+/* ========================================
+   HYPER TEXT — letter-scramble component
+   ======================================== */
+
+.hyper-text {
+  display: inline-flex;
+  overflow: hidden;
+  cursor: default;
+  /* Let parent control font/color */
+}
+
+.hyper-text-letter {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.hyper-text-space {
+  width: 0.3em;
+}
+
+/* Ensure HyperText inside the hero title inherits correctly */
+.hero-title-gsx .hyper-text,
+.hero-title-gwalior .hyper-text {
+  justify-content: center;
+}
+
+.hero-hyper-letter {
+  /* Inherits everything from parent — nothing extra needed */
+}
+
+/* ========================================
+   INTRO / PAGE-LOAD ANIMATION
+   Phase 0: everything hidden
+   Phase 1: "GSX GWALIOR" title animates in (blur → clear, scale up)
+   Phase 2: rest of content slides up from bottom (blur → clear)
+   ======================================== */
+
+/* ---------- title intro ---------- */
+.intro-title {
+  opacity: 0;
+  filter: blur(18px);
+  transform: translateY(50px) scale(0.92);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, filter, transform;
+}
+
+.intro-title.intro-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+/* ---------- rest-of-content intro ---------- */
+.intro-content {
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(60px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, filter, transform;
+}
+
+.intro-content.intro-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* ---------- navbar intro ---------- */
+.intro-phase-0 .navbar,
+.intro-phase-1 .navbar {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(-20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro-phase-2 .navbar {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+/* ---------- sections below hero ---------- */
+.intro-phase-0 main > *:not(.hero),
+.intro-phase-1 main > *:not(.hero) {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(70px);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro-phase-2 main > *:not(.hero) {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+    filter 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+}
+
+/* ---------- footer intro ---------- */
+.intro-phase-0 .cfoot,
+.intro-phase-1 .cfoot {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(70px);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro-phase-2 .cfoot {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.35s,
+    filter 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.35s,
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .intro-title,
+  .intro-content,
+  .intro-phase-0 .navbar,
+  .intro-phase-1 .navbar,
+  .intro-phase-0 main > *:not(.hero),
+  .intro-phase-1 main > *:not(.hero),
+  .intro-phase-0 .cfoot,
+  .intro-phase-1 .cfoot {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
