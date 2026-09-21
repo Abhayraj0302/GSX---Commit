@@ -1659,7 +1659,6 @@ button {
 
 .hyper-text {
   display: inline-flex;
-  overflow: hidden;
   cursor: default;
   /* Let parent control font/color */
 }
