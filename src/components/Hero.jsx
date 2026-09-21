@@ -26,11 +26,8 @@ export default function Hero() {
           Gwalior. We build. We ship. We grow.
         </p>
 
-        {/* CTA buttons */}
+        {/* CTA button */}
         <div className="hero-actions">
-          <a href="#events" className="btn btn-primary">
-            Join the Club <span aria-hidden="true">→</span>
-          </a>
           <a href="#events" className="btn btn-secondary">
             Explore Events
           </a>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Brand */}
         <a href="#" className="navbar-brand" aria-label="GSX Gwalior Chapter">
-          <SparkleIcon />
+          <Logo size={22} className="navbar-logo" />
           <span>GSX Gwalior Chapter</span>
         </a>
 
@@ -24,17 +25,5 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-  );
-}
-
-/* Sparkle SVG matching the screenshot brand icon */
-function SparkleIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M12 2L13.09 8.26L18 6L14.74 10.91L21 12L14.74 13.09L18 18L13.09 15.74L12 22L10.91 15.74L6 18L9.26 13.09L3 12L9.26 10.91L6 6L10.91 8.26L12 2Z"
-        fill="currentColor"
-      />
-    </svg>
   );
 }
