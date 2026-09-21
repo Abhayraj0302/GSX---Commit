@@ -1,5 +1,6 @@
 import React from 'react';
 import { TypingEffect } from './ui/typing-effect';
+import Logo from './Logo';
 
 const marqueeItems = [
   'Design Sprints',
@@ -13,9 +14,9 @@ const marqueeItems = [
 ];
 
 const stats = [
-  { value: '150+', label: 'Members' },
+  { value: '60+', label: 'Members' },
   { value: '20+', label: 'Events/Year' },
-  { value: '3+', label: 'Years Active' },
+  { value: '∞', label: 'Contributions' },
   { value: '100%', label: 'Passion' },
 ];
 
@@ -101,12 +102,7 @@ export default function About() {
             {/* Right — stats card */}
             <div className="stats-card">
               <div className="stats-card-icon">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 11C6.8 11 8.5 9.3 8.5 6.5V4C8.5 6.8 10.2 8.5 13 8.5C10.2 8.5 8.5 10.2 8.5 13V11Z" fill="#8B5CF6" opacity="0.8" />
-                  <path d="M24 11C21.2 11 19.5 9.3 19.5 6.5V4C19.5 6.8 17.8 8.5 15 8.5C17.8 8.5 19.5 10.2 19.5 13V11Z" fill="#8B5CF6" opacity="0.8" />
-                  <path d="M4 17C6.8 17 8.5 18.7 8.5 21.5V24C8.5 21.2 10.2 19.5 13 19.5C10.2 19.5 8.5 17.8 8.5 15V17Z" fill="#8B5CF6" opacity="0.8" />
-                  <path d="M24 17C21.2 17 19.5 18.7 19.5 21.5V24C19.5 21.2 17.8 19.5 15 19.5C17.8 19.5 19.5 17.8 19.5 15V17Z" fill="#8B5CF6" opacity="0.8" />
-                </svg>
+                <Logo size={34} />
               </div>
               <div className="stats-grid">
                 {stats.map((stat, i) => (
