@@ -11,9 +11,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   const [introPhase, setIntroPhase] = useState(0);
-  // Phase 0 → everything hidden
-  // Phase 1 → "GSX GWALIOR" title animates in (blur → clear)
-  // Phase 2 → rest of content slides up from bottom (blur → clear)
+
 
   useEffect(() => {
     // Small initial delay so the page settles
