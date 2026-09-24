@@ -7,14 +7,14 @@ const items = [
     number: "01",
     title: "Workshops & Bootcamps",
     content:
-      "Deep-dive technical sessions, interactive hack-style workshops, and bootcamps led by industry experts to help you master modern tools, build production-ready projects, and adapt to the rapidly evolving tech landscape.",
+      "Intensive, hands-on sessions on Git, GitHub, AI/ML, web development, and emerging tech — led by peers and industry professionals to bridge the gap between theory and practice.",
   },
   {
     id: "hackathons",
     number: "02",
     title: "Hackathons & Dev Sprints",
     content:
-      "Intensive hackathons and rapid dev sprints built for creators. Team up, brainstorm, and build impactful prototypes from scratch in a high-energy, competitive environment.",
+      "48-hour build marathons and competitive coding events where teams ideate, prototype, and ship real products — pushing creative and technical boundaries under pressure.",
   },
   {
     id: "community",
@@ -33,7 +33,7 @@ const items = [
 ];
 
 export function UniqueAccordion() {
-  const [activeId, setActiveId] = useState(null);
+  const [activeId, setActiveId] = useState("workshops");
   const [hoveredId, setHoveredId] = useState(null);
 
   return (

@@ -843,7 +843,7 @@ button {
    ABOUT / WHO WE ARE
    ======================================== */
 .about {
-  padding: 3.5rem 2rem 1.5rem;
+  padding: 3.5rem 2rem 3rem;
   background: var(--bg-primary);
 }
 
@@ -1064,7 +1064,7 @@ button {
    EVENTS
    ======================================== */
 .events {
-  padding: 1.5rem 2rem 4.5rem;
+  padding: 3rem 2rem 4.5rem;
   background: var(--bg-primary);
 }
 
@@ -1538,7 +1538,7 @@ button {
    WHAT WE DO
    ======================================== */
 .whatwedo {
-  padding: 1.5rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .whatwedo-container {
@@ -1554,8 +1554,7 @@ button {
   margin-top: 1.25rem;
 }
 
-.whatwedo-heading-col {
-}
+.whatwedo-heading-col {}
 
 .whatwedo-title {
   font-family: var(--font-hero);
@@ -2119,15 +2118,15 @@ button {
   }
 
   .about {
-    padding: 2.5rem 1.25rem 1rem;
+    padding: 2.5rem 1.25rem 1.5rem;
   }
 
   .whatwedo {
-    padding: 1rem 1.25rem;
+    padding: 1.5rem 1.25rem;
   }
 
   .events {
-    padding: 1rem 1.25rem 3.5rem;
+    padding: 1.5rem 1.25rem 3.5rem;
   }
 
   .whatwedo-layout {
