@@ -1581,6 +1581,7 @@ button {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
+  gap: 0.28em;
   font-family: var(--font-hero);
   font-size: clamp(2.4rem, 6vw, 4.5rem);
   font-weight: 800;
@@ -2269,8 +2270,27 @@ button {
     border-radius: 20px;
   }
 
-  .scroll-hero-sticky-header {
-    font-size: clamp(1.85rem, 6.5vw, 2.5rem);
+  .scroll-hero-heading-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.12em;
+    font-size: clamp(2.4rem, 9.5vw, 3.2rem);
+    line-height: 1.15;
+  }
+
+  .scroll-hero-prefix {
+    text-align: center;
+  }
+
+  .scroll-hero-word-slot {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .scroll-hero-purple-word {
+    text-align: center;
   }
 
   .events {

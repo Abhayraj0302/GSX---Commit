@@ -66,7 +66,7 @@ export default function WhatWeDo() {
         <div className="whatwedo-sticky-stage">
           <div className="scroll-hero-center-wrap">
             <h2 className="scroll-hero-heading-row">
-              <span className="scroll-hero-prefix">you can&nbsp;</span>
+              <span className="scroll-hero-prefix">you can</span>
               <span className="scroll-hero-word-slot">
                 <AnimatePresence mode="popLayout" initial={false}>
                   <motion.span
