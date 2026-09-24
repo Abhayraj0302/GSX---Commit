@@ -33,7 +33,7 @@ const items = [
 ];
 
 export function UniqueAccordion() {
-  const [activeId, setActiveId] = useState("workshops");
+  const [activeId, setActiveId] = useState(null);
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
