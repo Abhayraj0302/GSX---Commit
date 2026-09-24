@@ -164,10 +164,11 @@ export default function Footer() {
   return (
     <div
       ref={wrapperRef}
+      id="community"
       className="cfoot-reveal"
       style={{ clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0 100%)' }}
     >
-      <footer className="cfoot">
+      <footer className="cfoot" id="socials">
         {/* Ambient aurora + grid */}
         <div className="cfoot-aurora" aria-hidden="true" />
         <div className="cfoot-grid" aria-hidden="true" />

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Event from './components/Event';
+import WhatWeDo from './components/WhatWeDo';
 import Workshop from './components/Workshop';
 import Schedule from './components/Schedule';
 import Team from './components/Team';
@@ -30,6 +31,7 @@ export default function App() {
       <main>
         <Hero introPhase={introPhase} />
         <About />
+        <WhatWeDo />
         <Event />
         {/* Sections below are kept as placeholders — not shown in current screenshots */}
         <Workshop />

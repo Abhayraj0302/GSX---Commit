@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
 import { ShinyButton } from './ui/shiny-button';
+import { SlideTabs } from './ui/slide-tabs';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,12 +21,11 @@ export default function Navbar() {
           <span>GSX Gwalior Chapter</span>
         </a>
 
-        {/* Register button */}
-        <div className="navbar-cta" style={{ display: 'flex' }}>
-          <ShinyButton href="#events">Register Now</ShinyButton>
-        </div>
+        {/* Slide Tabs Navigation */}
+        <nav className="navbar-nav">
+          <SlideTabs />
+        </nav>
       </div>
     </header>
   );
 }
-
