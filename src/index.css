@@ -1650,12 +1650,12 @@ button {
 }
 
 .whatwedo-reveal-title-wrap {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .whatwedo-reveal-title {
   font-family: var(--font-hero);
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.7rem);
   font-weight: 800;
   font-style: italic;
   line-height: 1.15;
@@ -1669,7 +1669,7 @@ button {
   font-size: 1.05rem;
   color: var(--text-secondary);
   line-height: 1.65;
-  max-width: 640px;
+  max-width: 600px;
 }
 
 /* 4 Pillars Grid based on FAQ / Accordion questions & answers */
@@ -2267,7 +2267,10 @@ button {
 
   .whatwedo-reveal-card {
     padding: 2.25rem 1.25rem;
-    border-radius: 20px;
+  }
+
+  .whatwedo-pillar-card {
+    padding: 2.2rem 2rem;
   }
 
   .scroll-hero-heading-row {

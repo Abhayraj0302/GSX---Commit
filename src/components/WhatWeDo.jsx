@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
-import { Terminal, Rocket, Users, Globe, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Terminal, Rocket, Users, Globe, ArrowUpRight } from 'lucide-react';
 
 const WORDS = ['design.', 'prototype.', 'solve.', 'build.', 'develop.', 'cook.', 'ship.'];
 
@@ -11,8 +11,8 @@ const PILLARS = [
     icon: Terminal,
     title: 'Workshops & Bootcamps',
     description:
-      'Intensive, hands-on sessions on Git, GitHub, AI/ML, web development, and emerging tech — led by peers and industry professionals to bridge the gap between theory and practice.',
-    tags: ['Git & GitHub', 'Agentic AI', 'Web Development'],
+      'Learn by making. Guided sessions and self-paced labs turn core concepts and emerging tools into practical skills you can use in class, on a team, or in your next project.',
+    tags: ['Hands-on learning', 'Core concepts', 'Emerging technology'],
   },
   {
     id: 'hackathons',
@@ -20,8 +20,8 @@ const PILLARS = [
     icon: Rocket,
     title: 'Hackathons & Dev Sprints',
     description:
-      '48-hour build marathons and competitive coding events where teams ideate, prototype, and ship real products — pushing creative and technical boundaries under pressure.',
-    tags: ['48h Sprints', 'Rapid Prototyping', 'Product Shipping'],
+      'Build around a prompt, a problem, or an open brief. Join a short sprint or a multi-day challenge to explore ideas, collaborate across disciplines, and take a prototype as far as the format allows.',
+    tags: ['Build challenges', 'Team collaboration', 'From idea to demo'],
   },
   {
     id: 'community',
@@ -29,8 +29,8 @@ const PILLARS = [
     icon: Users,
     title: 'Community & Mentorship',
     description:
-      'A tight-knit network of builders across all branches and years. We run peer mentoring circles, study groups, and open office hours to help every member level up.',
-    tags: ['Peer Circles', 'Study Groups', 'Office Hours'],
+      'Find people to learn and build with. Peer support, shared practice, and mentor conversations make it easier to ask questions, exchange feedback, and keep growing at any experience level.',
+    tags: ['Peer learning', 'Mentor support', 'Open to all levels'],
   },
   {
     id: 'industry',
@@ -38,8 +38,8 @@ const PILLARS = [
     icon: Globe,
     title: 'Industry & Open Source',
     description:
-      'Guest talks from tech leaders, internship pipelines, and collaborative open-source projects that give members real-world experience and industry-ready portfolios.',
-    tags: ['Open Source PRs', 'Tech Talks', 'Career Pipelines'],
+      'Connect learning to the wider tech community through practitioner perspectives, open-source contributions, and projects shaped by real users and real constraints.',
+    tags: ['Industry perspectives', 'Open source', 'Real-world projects'],
   },
 ];
 
@@ -97,17 +97,12 @@ export default function WhatWeDo() {
         >
           {/* Header inside reveal card */}
           <div className="whatwedo-reveal-header">
-            <div className="section-label">
-              <Sparkles size={14} className="inline mr-1 text-purple-400" />
-              What We Do
-            </div>
-
             <div className="whatwedo-reveal-title-wrap">
               <h2 className="whatwedo-reveal-title">
                 Building the future, <span className="highlight">together.</span>
               </h2>
               <p className="whatwedo-reveal-subtitle">
-                From hands-on workshops to competitive hackathons, everything at GSX is crafted to turn curiosity into real-world engineering capability.
+                A place to explore technology, practice your craft, and make useful things with other curious people.
               </p>
             </div>
           </div>
@@ -123,7 +118,7 @@ export default function WhatWeDo() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  transition={{ duration: 0.35, delay: idx * 0.06 }}
                 >
                   <div className="pillar-card-top">
                     <div className="pillar-icon-badge">
