@@ -739,6 +739,106 @@ button {
   transform: translateY(-2px);
 }
 
+.hero-actions .flow-button {
+  position: relative;
+  isolation: isolate;
+  min-height: 48px;
+  overflow: hidden;
+  padding: 0.75rem 2rem;
+  border: 1.5px solid rgba(167, 139, 250, 0.65);
+  border-radius: 999px;
+  background: transparent;
+  color: #F3F4F6;
+  box-shadow: none;
+  transition: border-radius 500ms cubic-bezier(0.23, 1, 0.32, 1), border-color 400ms ease, color 400ms ease, transform 250ms ease;
+}
+
+.flow-button-label {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-0.5rem);
+  transition: transform 600ms ease;
+}
+
+.flow-button-fill {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #7C3AED;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: width 650ms cubic-bezier(0.19, 1, 0.22, 1), height 650ms cubic-bezier(0.19, 1, 0.22, 1), opacity 300ms ease;
+}
+
+.flow-button-arrow {
+  position: absolute;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  color: #F3F4F6;
+  transition: left 600ms cubic-bezier(0.34, 1.56, 0.64, 1), right 600ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 250ms ease;
+}
+
+.flow-button-arrow-left {
+  left: -25%;
+  opacity: 0;
+}
+
+.flow-button-arrow-right {
+  right: 1rem;
+}
+
+.hero-actions .flow-button:hover,
+.hero-actions .flow-button:focus-visible {
+  border-color: transparent;
+  border-radius: 12px;
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.flow-button:hover .flow-button-fill,
+.flow-button:focus-visible .flow-button-fill {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+.flow-button:hover .flow-button-label,
+.flow-button:focus-visible .flow-button-label {
+  transform: translateX(0.5rem);
+}
+
+.flow-button:hover .flow-button-arrow-left,
+.flow-button:focus-visible .flow-button-arrow-left {
+  left: 1rem;
+  opacity: 1;
+}
+
+.flow-button:hover .flow-button-arrow-right,
+.flow-button:focus-visible .flow-button-arrow-right {
+  right: -25%;
+  opacity: 0;
+}
+
+.flow-button:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-actions .flow-button,
+  .flow-button-label,
+  .flow-button-fill,
+  .flow-button-arrow {
+    transition-duration: 0.01ms;
+  }
+}
+
 /* Scroll indicator */
 .hero-scroll {
   display: flex;

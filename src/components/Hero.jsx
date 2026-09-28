@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { HyperText } from './ui/hyper-text';
 
 export default function Hero({ introPhase = 2 }) {
@@ -39,8 +40,11 @@ export default function Hero({ introPhase = 2 }) {
 
           {/* CTA button */}
           <div className="hero-actions">
-            <a href="#events" className="btn btn-secondary">
-              Explore Events
+            <a href="#events" className="btn btn-secondary flow-button">
+              <ArrowRight className="flow-button-arrow flow-button-arrow-left" aria-hidden="true" />
+              <span className="flow-button-label">Explore Events</span>
+              <span className="flow-button-fill" aria-hidden="true" />
+              <ArrowRight className="flow-button-arrow flow-button-arrow-right" aria-hidden="true" />
             </a>
           </div>
 
