@@ -7,7 +7,7 @@ const EVENTS = [
     id: 'gsx-commit-1',
     name: 'GSX Commit 1.0',
     date: '01 October 2026',
-    time: '12:00 PM IST',
+    time: '10:00 AM – 1:00 PM',
     venue: 'MITS-DU',
     registrationUrl:
       'https://docs.google.com/forms/d/e/1FAIpQLSf98MjrMb0FOey76Ttg51WTkQ3xWWkgU8Qxj4LBFt4spo92pA/viewform?usp=header',
