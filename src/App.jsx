@@ -9,6 +9,7 @@ import Schedule from './components/Schedule';
 import Team from './components/Team';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import { ShaderBackground } from './components/ui/light-shader';
 
 export default function App() {
   const [introPhase, setIntroPhase] = useState(0);
@@ -27,6 +28,9 @@ export default function App() {
 
   return (
     <div className={`app-layout intro-phase-${introPhase}`}>
+      <div className="site-shader-background" aria-hidden="true">
+        <ShaderBackground />
+      </div>
       <Navbar />
       <main>
         <Hero introPhase={introPhase} />
