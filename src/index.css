@@ -2328,6 +2328,14 @@ button {
     justify-content: center;
   }
 
+  .hero-actions .flow-button {
+    width: auto;
+    min-width: 0;
+    max-width: max-content;
+    padding-right: 1.65rem;
+    padding-left: 1.65rem;
+  }
+
   .hero-dots,
   .hero-sparkle-accent {
     display: none;
