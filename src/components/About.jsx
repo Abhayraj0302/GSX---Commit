@@ -1,7 +1,6 @@
 import React from 'react';
 import { Handshake, Rocket } from 'lucide-react';
 import { TypingEffect } from './ui/typing-effect';
-import Logo from './Logo';
 
 const FlashIcon = ({ size = 24 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,13 +32,6 @@ const marqueeItems = [
   'Workshops',
   'Tech Talks',
   'Open Source',
-];
-
-const stats = [
-  { value: '60+', label: 'Members' },
-  { value: '20+', label: 'Events/Year' },
-  { value: '∞', label: 'Contributions' },
-  { value: '100%', label: 'Passion' },
 ];
 
 const features = [
@@ -96,8 +88,8 @@ export default function About() {
           <div className="section-label">Who We Are</div>
 
           <div className="about-content">
-            {/* Left — text */}
-            <div className="about-text-column">
+            {/* Left — heading */}
+            <div className="about-heading-column">
               <h2 className="about-heading">
                 Built for the
                 <br />
@@ -110,8 +102,12 @@ export default function About() {
                   rotationInterval={2500}
                 />
               </h2>
+            </div>
+
+            {/* Right — body text */}
+            <div className="about-text-column">
               <p className="about-text">
-                GSX Gwalior is a student-led technology community at MIT-DU Gwalior, built to bridge the gap between academic learning and real-world engineering. We create a space where students can learn, build, connect, and grow through hands-on experiences.
+                GSX Gwalior is a student-led technology community at MITS-DU Gwalior, built to bridge the gap between academic learning and real-world engineering. We create a space where students can learn, build, connect, and grow through hands-on experiences.
               </p>
               <p className="about-text">
                 From open-source contributions, competitive coding, and emerging technologies to real-world projects, hackathons, design, startup ideation, peer learning, and industry interaction, GSX brings together students with different interests and skill levels.
@@ -119,21 +115,6 @@ export default function About() {
               <p className="about-text">
                 Whether you're a beginner exploring technology, a developer building projects, a creative mind, or someone passionate about community and innovation — GSX Gwalior is a place to turn curiosity into creation and ideas into impact.
               </p>
-            </div>
-
-            {/* Right — stats card */}
-            <div className="stats-card">
-              <div className="stats-card-icon">
-                <Logo size={34} />
-              </div>
-              <div className="stats-grid">
-                {stats.map((stat, i) => (
-                  <div className="stat-item" key={i}>
-                    <span className="stat-value">{stat.value}</span>
-                    <span className="stat-label">{stat.label}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
