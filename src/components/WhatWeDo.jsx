@@ -2,8 +2,6 @@ import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import { Terminal, Rocket, Users, Globe, ArrowUpRight } from 'lucide-react';
 
-const WORDS = ['design.', 'prototype.', 'solve.', 'build.', 'develop.', 'cook.', 'ship.'];
-
 const PILLARS = [
   {
     id: 'workshops',
@@ -43,17 +41,17 @@ const PILLARS = [
   },
 ];
 
+const WORDS = ['design.', 'prototype.', 'solve.', 'build.', 'develop.', 'cook.', 'ship.'];
+
 export default function WhatWeDo() {
   const trackRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Track scroll through the sticky stage with extra reading time
   const { scrollYProgress } = useScroll({
     target: trackRef,
     offset: ['start start', 'end end'],
   });
 
-  // Discrete complete word state — never gets stuck halfway between words
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const idx = Math.min(WORDS.length - 1, Math.max(0, Math.floor(latest * WORDS.length)));
     setActiveIndex(idx);
@@ -61,7 +59,6 @@ export default function WhatWeDo() {
 
   return (
     <section className="whatwedo-scroll-section" id="whatwedo">
-      {/* Sticky Word Cycle Stage */}
       <div className="whatwedo-scroll-track" ref={trackRef}>
         <div className="whatwedo-sticky-stage">
           <div className="scroll-hero-center-wrap">
