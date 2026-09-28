@@ -21,7 +21,7 @@ Build a single responsive landing page with these sections:
 
 ## Visual Direction
 
-- Use a restrained deep-sea charcoal/navy base, readable warm-white text, and one muted sea-glass accent. Keep contrast high and avoid purple/black neon styling.
+- Use `#06131C` as the very dark navy background and slightly lighter navy cards. Use cyan/teal for primary actions, orange/red for detection warnings, green for safe/verified states, and white with muted blue-grey for text.
 - Use the provided slowly moving topographic field at low visual intensity, with a solid readability overlay. Respect `prefers-reduced-motion` and provide a static fallback if WebGL is unavailable.
 - Prefer clear typography, deliberate spacing, simple square-edged panels, and real product UI over decorative cards. Avoid harsh gradients, rainbow color, generic card grids, glass effects, heavy shadows, emoji, ornamental icon packs, fake testimonials, pricing tiers, decorative orbs/dot grids, terminal mockups, and gratuitous hover or arrow animations.
 - Ensure the navigation, workspace, detection list, buttons, and footer reflow cleanly on small screens and remain usable by keyboard.

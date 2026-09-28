@@ -1238,16 +1238,6 @@ button {
   gap: 0.55rem;
 }
 
-.event-eyebrow {
-  display: inline-flex;
-  color: var(--text-secondary);
-  font-family: var(--font-brand);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .event-badge-simple {
   display: inline-flex;
   align-items: center;

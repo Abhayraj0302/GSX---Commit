@@ -6,7 +6,7 @@ const EVENTS = [
   {
     id: 'gsx-commit-1',
     name: 'GSX Commit 1.0',
-    date: '01 October 2026',
+    date: '03 October 2026',
     time: '10:00 AM – 1:00 PM',
     venue: 'MITS-DU',
     registrationUrl:
@@ -14,7 +14,7 @@ const EVENTS = [
   },
 ];
 
-const EVENT_START = new Date('2026-10-01T12:00:00+05:30');
+const EVENT_START = new Date('2026-10-03T10:00:00+05:30');
 
 function getTimeLeft() {
   const difference = Math.max(0, EVENT_START.getTime() - Date.now());
@@ -56,6 +56,7 @@ export default function Event() {
                 </div>
 
                 <div className="event-countdown" role="timer" aria-label={timeLeft.isLive ? 'GSX Commit 1.0 is live' : `${timeLeft.days} days, ${timeLeft.hours} hours, ${timeLeft.minutes} minutes, ${timeLeft.seconds} seconds until GSX Commit 1.0`}>
+                  <p className="event-countdown-heading">Starting in</p>
                   <div className="event-countdown-units" aria-hidden="true">
                     {[
                       ['Days', timeLeft.days, 'days'],

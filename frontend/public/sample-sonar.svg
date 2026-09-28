@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative side-scan sonar sample</title>
+  <desc id="desc">A grayscale sonar-style image with seafloor bands and four example targets. All detections are sample data.</desc>
+  <defs>
+    <filter id="sonar-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="27" />
+      <feColorMatrix type="saturate" values="0" />
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.22" />
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="screen" />
+    </filter>
+    <pattern id="scan-lines" width="5" height="5" patternUnits="userSpaceOnUse">
+      <path d="M0 4.5H5" stroke="#d4d9d2" stroke-opacity=".045" />
+    </pattern>
+  </defs>
+  <rect width="1400" height="800" fill="#1a2527" />
+  <path d="M0 175C170 210 280 156 418 193S685 218 830 184s246-18 570 16v207c-181-30-297-13-440 12s-230 5-363-15-305 8-597 29Z" fill="#384344" opacity=".65" />
+  <path d="M0 444c224-43 355-10 510 18s234 22 359-14 291-51 531-17v213c-210-37-334-21-505 18s-258 29-413-9-293-42-482-3Z" fill="#475151" opacity=".58" />
+  <path d="M0 128c174 34 307 3 446 39s256 28 399-2 309-16 555 19M0 248c196-43 321-4 487 30s252 19 406-22 297-32 507-3M0 514c202-38 343-3 505 27s241 19 386-16 324-45 509-9M0 668c198-32 324-16 487 20s276 39 427 3 286-35 486-12" fill="none" stroke="#c5ccc3" stroke-opacity=".28" stroke-width="3" />
+  <path d="M0 364c161-21 245 7 384 24s257 26 409-2 331-47 607-21M0 735c160-20 282-4 407 14s267 24 404-7 344-42 589-21" fill="none" stroke="#d4d9d2" stroke-opacity=".12" stroke-width="14" />
+  <g fill="#c7ccc4" opacity=".76">
+    <path d="m238 393 26-15 43 2 21 15-14 16-55 4-22-9z" />
+    <path d="m839 282 30-24 52 8 29 29-17 28-52 7-41-18z" />
+    <path d="m655 550 18-19 24 10 5 27-17 16-29-8z" />
+    <path d="m1132 493 24-18 26 8 13 21-18 22-33-4z" />
+  </g>
+  <g fill="#080d0e" opacity=".56">
+    <path d="m323 398 154 27-154-4z" />
+    <path d="m950 306 138 33-138-9z" />
+    <path d="m702 566 91 19-91-4z" />
+    <path d="m1194 514 111 18-111-4z" />
+  </g>
+  <rect width="1400" height="800" fill="url(#scan-lines)" />
+  <rect width="1400" height="800" filter="url(#sonar-grain)" opacity=".22" />
+  <path d="M700 0v800" stroke="#e5e8df" stroke-opacity=".12" />
+  <text x="28" y="46" fill="#d7ddd5" fill-opacity=".68" font-family="monospace" font-size="18" letter-spacing="2">ILLUSTRATIVE SONAR SAMPLE · NOT FIELD DATA</text>
+  <text x="28" y="770" fill="#d7ddd5" fill-opacity=".54" font-family="monospace" font-size="14" letter-spacing="1">PORT RETURN / STARBOARD RETURN</text>
+</svg>
